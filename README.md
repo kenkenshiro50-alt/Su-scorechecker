@@ -4,7 +4,7 @@
 | :--- | :--- | :--- | :--- |
 | **นายกฤตนัน จุลกลับ** | 681310394 | **Backend (Express), API & DSA:**<br>- `backend/server.js` (API Proxy, In-Memory Cache, Fallback Handler, Player Roster Route `/api/teams/:id/players`)<br>- Routes & DSA: Selection/Insertion/Bubble Sort, Queue (FIFO), Stack (LIFO) | - ช่วงที่ 1: เปิดและตารางส่วนร่วม<br>- ช่วงที่ 4: เบื้องหลังระบบ (ฝั่ง Express & API)<br>- ช่วงที่ 5: DSA เชิงลึก (Big-O & เทียบก่อน-หลัง) |
 | **นายนานาวินลี** | 681310016 | **Frontend (React + Vite) & UX:**<br>- `frontend/src/App.jsx` (Main State & Component Tree)<br>- Components: `StandingsTable`, `MatchList`, `QueuePanel`, `HistoryPanel`, `PlayerRosterModal`<br>- **UX:** จัดการสถานะ `loading / empty / error / success` และฟีเจอร์ดูรายชื่อนักกีฬา | - ช่วงที่ 2: จากงานแรกสู่งานนี้ (Before → After)<br>- ช่วงที่ 3: Demo ระบบจริง (User Journey)<br>- ช่วงที่ 6: สรุปผลงานและข้อจำกัด |
-|
+
 ### 7.2 ตารางข้อแนะนำจากงานแรก สิ่งที่แก้
 
 | ข้อแนะนำจากงานแรก | สิ่งที่แก้ในงานนี้ | หลักฐาน Before / After |
