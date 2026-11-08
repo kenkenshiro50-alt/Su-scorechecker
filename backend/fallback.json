@@ -1,0 +1,90 @@
+{
+  "matches": [
+    {
+      "id": 1,
+      "utcDate": "2026-09-26T14:00:00Z",
+      "status": "FINISHED",
+      "homeTeam": "Arsenal",
+      "awayTeam": "Chelsea",
+      "homeScore": 2,
+      "awayScore": 1
+    },
+    {
+      "id": 2,
+      "utcDate": "2026-09-26T16:30:00Z",
+      "status": "FINISHED",
+      "homeTeam": "Liverpool",
+      "awayTeam": "Everton",
+      "homeScore": 3,
+      "awayScore": 0
+    },
+    {
+      "id": 3,
+      "utcDate": "2026-09-27T13:00:00Z",
+      "status": "SCHEDULED",
+      "homeTeam": "Manchester City",
+      "awayTeam": "Tottenham",
+      "homeScore": null,
+      "awayScore": null
+    },
+    {
+      "id": 4,
+      "utcDate": "2026-09-27T15:30:00Z",
+      "status": "SCHEDULED",
+      "homeTeam": "Manchester United",
+      "awayTeam": "Aston Villa",
+      "homeScore": null,
+      "awayScore": null
+    }
+  ],
+  "standings": [
+    {
+      "position": 1,
+      "team": "Arsenal",
+      "playedGames": 6,
+      "won": 5,
+      "draw": 1,
+      "lost": 0,
+      "points": 16,
+      "goalsFor": 14,
+      "goalsAgainst": 5,
+      "goalDifference": 9
+    },
+    {
+      "position": 2,
+      "team": "Liverpool",
+      "playedGames": 6,
+      "won": 5,
+      "draw": 0,
+      "lost": 1,
+      "points": 15,
+      "goalsFor": 13,
+      "goalsAgainst": 6,
+      "goalDifference": 7
+    },
+    {
+      "position": 3,
+      "team": "Manchester City",
+      "playedGames": 6,
+      "won": 4,
+      "draw": 1,
+      "lost": 1,
+      "points": 13,
+      "goalsFor": 15,
+      "goalsAgainst": 8,
+      "goalDifference": 7
+    },
+    {
+      "position": 4,
+      "team": "Chelsea",
+      "playedGames": 6,
+      "won": 3,
+      "draw": 2,
+      "lost": 1,
+      "points": 11,
+      "goalsFor": 10,
+      "goalsAgainst": 7,
+      "goalDifference": 3
+    }
+  ]
+}

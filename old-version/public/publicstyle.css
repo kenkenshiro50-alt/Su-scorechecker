@@ -1,0 +1,106 @@
+:root{--bg:#0d0d0d;--card:#1a1a1a;--card2:#232323;--line:#2c2c2c;--text:#f2f2f2;--muted:#8d8d8d;--green:#00985f;--red:#ff4b4b;--accent:#1ed760}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--text);font-family:'Segoe UI',Tahoma,sans-serif;font-size:14px}
+.small{color:var(--muted);font-size:12px}
+.mt{margin:8px 0 10px;line-height:1.7}
+
+/* Header */
+header{position:sticky;top:0;z-index:20;background:#111;border-bottom:1px solid var(--line)}
+.nav{max-width:1100px;margin:auto;display:flex;align-items:center;gap:20px;padding:12px 16px}
+.logo{font-weight:800;font-size:20px;color:var(--accent);letter-spacing:-.5px}
+.nav a{color:var(--muted);font-weight:600;cursor:pointer;padding:6px 2px;border-bottom:2px solid transparent}
+.nav a.active{color:#fff;border-color:var(--accent)}
+.search{margin-left:auto;background:var(--card);border:1px solid var(--line);border-radius:20px;padding:8px 14px;color:#fff;width:200px;outline:none}
+.reload{background:var(--card);border:1px solid var(--line);color:#fff;border-radius:50%;width:36px;height:36px;cursor:pointer}
+.reload.spin{animation:spin .8s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+/* Layout */
+main{max-width:1100px;margin:auto;padding:16px;display:grid;grid-template-columns:1fr 340px;gap:16px;align-items:start}
+@media(max-width:900px){main{grid-template-columns:1fr}.search{width:130px}.nav a{display:none}}
+
+/* Dates */
+.dates{display:flex;gap:6px;overflow-x:auto;margin-bottom:12px;padding-bottom:4px}
+.date{flex:none;min-width:68px;text-align:center;background:var(--card);border-radius:12px;padding:8px 6px;cursor:pointer}
+.date small{display:block;color:var(--muted);font-size:11px}
+.date b{font-size:15px}
+.date.active{background:var(--green)}
+.date.active small{color:#d6ffe9}
+
+/* Filters */
+.filters{display:flex;gap:8px;margin-bottom:12px;flex-wrap:wrap}
+.chip{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:6px 14px;cursor:pointer;color:var(--muted);font-weight:600}
+.chip.active{background:#fff;color:#000}
+
+/* League + rows */
+.league{background:var(--card);border-radius:14px;margin-bottom:12px;overflow:hidden}
+.lh{display:flex;align-items:center;gap:10px;padding:12px 14px;cursor:pointer;border-bottom:1px solid var(--line)}
+.lh small{color:var(--muted);display:block;font-size:11px}
+.lh .arrow{margin-left:auto;color:var(--muted);transition:.2s}
+.league.closed .arrow{transform:rotate(-90deg)}
+.league.closed .matches{display:none}
+
+.match{display:grid;grid-template-columns:56px 1fr 64px 1fr 30px;align-items:center;gap:6px;padding:11px 14px;border-bottom:1px solid var(--line);cursor:pointer}
+.match:last-child{border:0}
+.match:hover{background:var(--card2)}
+.status{font-size:12px;color:var(--muted);text-align:center}
+.status.live{color:var(--red);font-weight:700}
+.team{display:flex;align-items:center;gap:8px;font-weight:600;min-width:0}
+.team .n{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.team.home{flex-direction:row-reverse;text-align:right}
+.score{text-align:center;font-weight:800;font-size:15px;background:var(--card2);border-radius:6px;padding:3px 0;white-space:nowrap}
+.score.live{color:var(--red)}
+.score.ns{color:var(--muted);background:none;font-weight:500}
+.star{cursor:pointer;color:#555;font-size:18px;text-align:center}
+.star.on{color:#ffc928}
+.empty{padding:40px;text-align:center;color:var(--muted)}
+.source{color:var(--muted);font-size:12px;text-align:center;margin-top:8px}
+@media(max-width:520px){.match{grid-template-columns:44px 1fr 54px 1fr 24px;padding:10px 8px;font-size:13px}}
+
+/* Crest / logo */
+.crest{position:relative;width:24px;height:24px;border-radius:50%;display:grid;place-items:center;font-size:9px;font-weight:800;color:#fff;flex:none}
+.crest img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain}
+.crest.has-logo{background:transparent!important;color:transparent}
+.crest.lg{width:72px;height:72px;font-size:20px}
+
+/* Sidebar */
+.side .box{background:var(--card);border-radius:14px;padding:14px;margin-bottom:12px}
+.side h3{font-size:14px}
+.box-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;gap:8px}
+select{background:var(--card2);color:#fff;border:1px solid var(--line);border-radius:8px;padding:5px 8px;font-size:12px}
+.btn{width:100%;background:var(--card2);color:#fff;border:1px solid var(--line);border-radius:10px;padding:9px;cursor:pointer;font-weight:600}
+.btn:hover{background:var(--green);border-color:var(--green)}
+table{width:100%;border-collapse:collapse;font-size:13px}
+td,th{padding:6px 3px;text-align:center}
+th{color:var(--muted);font-weight:500}
+td:nth-child(2),th:nth-child(2){text-align:left}
+tr.cl td:first-child{box-shadow:inset 3px 0 var(--accent)}
+tr.rel td:first-child{box-shadow:inset 3px 0 var(--red)}
+.tt{display:flex;align-items:center;gap:6px}
+#history div{padding:3px 0;border-bottom:1px dashed var(--line)}
+
+/* Dialog */
+.match-dialog{width:min(480px,calc(100% - 24px));margin:auto;padding:0;border:0;border-radius:18px;background:var(--card);color:var(--text)}
+.match-dialog::backdrop{background:#000b;backdrop-filter:blur(3px)}
+.dialog-head{display:flex;align-items:center;justify-content:space-between;padding:16px 20px;border-bottom:1px solid var(--line)}
+.dialog-head h2{font-size:17px}
+.x{background:none;border:0;color:var(--muted);font-size:26px;cursor:pointer;line-height:1}
+.match-details{padding:24px 20px}
+.match-teams{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:10px;text-align:center}
+.match-team{display:grid;justify-items:center;gap:10px;font-weight:700;min-width:0}
+.match-score{font-size:34px;font-weight:800;white-space:nowrap}
+.match-meta{margin-top:22px;padding-top:14px;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:10px;color:var(--muted)}
+.badge{padding:3px 10px;border-radius:999px;background:var(--card2);font-size:12px;color:var(--text)}
+.badge.live{background:var(--red);color:#fff}
+/* ===== เพิ่มใหม่ ===== */
+.leagues{display:flex;gap:8px;overflow-x:auto;margin-bottom:12px;padding-bottom:4px}
+.leagues .chip{flex:none;white-space:nowrap}
+.match-dialog{max-height:90vh;overflow:auto}
+.lu{margin-top:18px}
+.lu h4{display:flex;align-items:center;gap:8px;margin-bottom:8px;font-size:14px}
+.pl{display:flex;gap:8px;padding:4px 0;border-bottom:1px dashed var(--line);font-size:13px}
+.pl b{width:26px;color:var(--muted);flex:none}
+.pl .pos{margin-left:auto;color:var(--muted);text-align:right}
+.link{cursor:pointer}
+.link:hover{color:var(--accent)}
+.warn{color:var(--red)}
